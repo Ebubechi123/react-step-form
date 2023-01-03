@@ -35,15 +35,7 @@ align-items: center;
 justify-content: center;
 position: relative;
 border: ${({border})=>border ? border :'none'};
-/* &::after{
-    display: ${({displayAfter})=>displayAfter ? displayAfter :'inline-block'};
-    content: '';
-    height: 2px;
-    width:${({width})=>width ? width :'900%'};
-    position:absolute;
-    left:33px;
-    background-color:${({afterLineColor})=>afterLineColor ? afterLineColor : colors.primary_color} ;
-} */
+
 `
 
 export const IndicatorInnerCircle = styled.div`
@@ -59,9 +51,10 @@ position: relative;
 
 export const HorizontalLine = styled.hr`
 width: ${({width})=>width ? width :''};
-height: ${({height})=>height ? height :""};
+height: ${({height})=>height ? height :"3px"};
 background-color: ${({bg})=>bg ? bg :""};
 border: none;
+display: ${({display})=>display ? display :'block'};
 @media screen and (max-width:780px) {
     width: ${({resWidth})=>resWidth ? resWidth :''};
 }

@@ -10,12 +10,12 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 
 const Indicator = ({ steps, setSteps, components, IndicatorHandler }) => {
-  // let componentsLength = components.length;
 
   return (
     <IndicatorWrapper>
       {components.map((e, index) => (
-        <SingleIndicator
+      <React.Fragment key={index} >
+          <SingleIndicator
           components={components}
           IndicatorHandler={IndicatorHandler}
           setSteps={setSteps}
@@ -23,63 +23,16 @@ const Indicator = ({ steps, setSteps, components, IndicatorHandler }) => {
           id={index}
           key={index}
         />
+    
+      </React.Fragment>
       ))}
-
-      {/* <Line bg={steps>0 ? 'blue' :'lightgrey'}   height={"0.1px"} width={"40%"} resWidth={"40%"} /> */}
-
-      {/* <IndicatorOuterCirlce   bg={steps>0 ? 'blue':'transparent'} border={steps>0 ?'none': `1px solid blue`} onClick={()=>{
-        if(steps===0)
-        {
-        return steps;
-        }
-        else{
-        setSteps(1)
-        }
-
-        }}  > 
-        <IndicatorInnerCircle  bg={steps>0 ? 'white' : 'lighgrey' } />
-        </IndicatorOuterCirlce> */}
-      {/* 
-        <Line bg={steps>1 ? colorTheme.primary_color :colorTheme.black.light} height={"0.1px"} width={"40%"} resWidth={"40%"}/>
-
-        <IndicatorOuterCirlce  bg={steps>1 ? colorTheme.primary_color :'transparent'} border={steps>1 ?'none': `1px solid ${colorTheme.primary_color}`}  >
-        <IndicatorInnerCircle  bg={steps>1 ? 'white' : colorTheme.black.soft } />
-        </IndicatorOuterCirlce> */}
     </IndicatorWrapper>
   )
 }
 
 export default Indicator
 
-{
-  /* <IndicatorOuterCirlce onClick={()=>{
-    setSlides(0)
 
-}} >
-<IndicatorInnerCircle />
-</IndicatorOuterCirlce>
-
-<Line bg={slides>0 ? colorTheme.primary_color :colorTheme.black.light}   height={"0.1px"} width={"40%"} resWidth={"40%"} />
-
-<IndicatorOuterCirlce   bg={slides>0 ? colorTheme.primary_color :'transparent'} border={slides>0 ?'none': `1px solid ${colorTheme.primary_color}`} onClick={()=>{
-if(slides===0)
-{
-return slides;
-}
-else{
-setSlides(1)
-}
-
-}}  > 
-<IndicatorInnerCircle  bg={slides>0 ? 'white' : colorTheme.black.soft } />
-</IndicatorOuterCirlce>
-
-<Line bg={slides>1 ? colorTheme.primary_color :colorTheme.black.light} height={"0.1px"} width={"40%"} resWidth={"40%"}/>
-
-<IndicatorOuterCirlce  bg={slides>1 ? colorTheme.primary_color :'transparent'} border={slides>1 ?'none': `1px solid ${colorTheme.primary_color}`}  >
-<IndicatorInnerCircle  bg={slides>1 ? 'white' : colorTheme.black.soft } />
-</IndicatorOuterCirlce> */
-}
 
 const SingleIndicator = ({
   id,
@@ -89,7 +42,6 @@ const SingleIndicator = ({
   IndicatorHandler
 }) => {
   const [toggleDisplay, setToggleDisplay] = useState('block')
-  const [width, setWidth] = useState('')
 
   const StepsHandler = () => {
     if (IndicatorHandler) {
@@ -105,17 +57,18 @@ const SingleIndicator = ({
     }
   }, [])
   return (
-    <IndicatorOuterCirlce
+   <React.Fragment>
+     <IndicatorOuterCirlce
       onClick={() => {
         StepsHandler()
       }}
-      width={width}
       displayAfter={toggleDisplay}
-      bg={steps === id ? colors.primary_color : colors.inActive}
+      bg={steps >= id ? colors.primary_color : colors.inActive}
       id={id}
     >
       <IndicatorInnerCircle />
     </IndicatorOuterCirlce>
+    <Line id={id} bg={steps >= id ? colors.primary_color : colors.inActive} display={toggleDisplay}  width={"100%"} resWidth={"40%"} />
+   </React.Fragment>
   )
 }
-// width={ components.length > 2 ? `${components.length*60}px` : ''}

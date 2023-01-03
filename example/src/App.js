@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 
 import { ReactStepForm, Prev, Next } from 'react-step-form'
-// import 'react-step-form/dist/index.css'
-
 const Test1 = ({ steps, setSteps, noOfSteps }) => {
   return (
     <>
@@ -95,7 +93,7 @@ const App = () => {
     <Test1 steps={steps} setSteps={setSteps} noOfSteps={noOfSteps} />,
     <Test2 steps={steps} setSteps={setSteps} noOfSteps={noOfSteps} />,
     <Test3 steps={steps} setSteps={setSteps} noOfSteps={noOfSteps} />,
-    <Test4 steps={steps} setSteps={setSteps} noOfSteps={noOfSteps} />
+    <Test4 steps={steps} setSteps={setSteps} noOfSteps={noOfSteps} />,
   ]
 
   return (
