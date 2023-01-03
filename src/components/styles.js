@@ -10,6 +10,19 @@ flex-direction: column;
 align-items: center;
 margin: ${({ margin }) => (margin ? margin : "")};
 `
+export const IndicatorWrapper =styled.div`
+width: 100%;
+display: flex;
+align-items: center;
+justify-content:space-evenly;
+gap: ${({gap})=>gap ? gap :''};
+position: relative;
+margin-right: auto;
+/* scroll-snap-type:none;
+scrollbar-gutter: none; */
+scrollbar-width: 0px;
+`
+
 
 export const IndicatorOuterCirlce= styled.div`
 width: 10px;
@@ -22,15 +35,15 @@ align-items: center;
 justify-content: center;
 position: relative;
 border: ${({border})=>border ? border :'none'};
-&::after{
-    display: ${({displayAfter})=>displayAfter ? displayAfter :'block'};
+/* &::after{
+    display: ${({displayAfter})=>displayAfter ? displayAfter :'inline-block'};
     content: '';
-    height: 3px;
-    width:220px;
+    height: 2px;
+    width:${({width})=>width ? width :'900%'};
     position:absolute;
     left:33px;
     background-color:${({afterLineColor})=>afterLineColor ? afterLineColor : colors.primary_color} ;
-}
+} */
 `
 
 export const IndicatorInnerCircle = styled.div`
@@ -43,15 +56,6 @@ position: relative;
 `
 
 
-export const IndicatorWrapper =styled.div`
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: space-evenly;
-/* scroll-snap-type:none;
-scrollbar-gutter: none; */
-scrollbar-width: 0px;
-`
 
 export const HorizontalLine = styled.hr`
 width: ${({width})=>width ? width :''};
@@ -89,3 +93,4 @@ width:28%;
 width:18%;
 }
 `
+
