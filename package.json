@@ -2,9 +2,8 @@
   "name": "react-step-form",
   "version": "1.0.0",
   "description": "react-step-form built using react for react projects",
-  "author": "Ebubechi123",
   "license": "MIT",
-  "repository": "Ebubechi/react-step-form",
+  "repository": "Ebubechi123/react-step-form",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
@@ -27,6 +26,20 @@
     "react": "^16.0.0",
     "styled-components": "^5.3.6"
   },
+  "keywords": [
+    "react",
+    "progress-wizard",
+    "wizard",
+    "multi-step",
+    "form",
+    "react-component",
+    "react-step-form"
+  ],
+  "author": {
+    "name": "Ebubechi Ihediwa",
+    "email": "ebube2003nice@gmail.com"
+  },
+  "homepage": "https://github.com/Ebubechi123/react-step-form",
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.2",
