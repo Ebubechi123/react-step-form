@@ -1,6 +1,6 @@
-# react-step-form
+# @ebubechi_ihediwa/react-step-form
 
-> react-step-form built using react for react projects
+> Multi-Step-Form built using react for react projects
 
 [![NPM](https://img.shields.io/npm/v/@ebubechi_ihediwa/react-step-form.svg)](https://www.npmjs.com/package/@ebubechi_ihediwa/react-step-form) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
