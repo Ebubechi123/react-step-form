@@ -10,7 +10,9 @@ const PrimaryComponent = ({
   height,
   noOfSteps,
   setSteps,
-  IndicatorHandler
+  IndicatorHandler,
+  indicatorActiveColor,
+  indicatorInActiveColor
 }) => {
   return (
     <React.Fragment>
@@ -21,6 +23,8 @@ const PrimaryComponent = ({
           noOfSteps={noOfSteps}
           IndicatorHandler={IndicatorHandler}
           components={components}
+          indicatorActiveColor={indicatorActiveColor}
+          indicatorInActiveColor={indicatorInActiveColor}
         />
         <StepComponent
           steps={steps}

@@ -4,9 +4,9 @@ import React from 'react'
 const StateContext = createContext();
 
 export const StateProvider =({children})=>{
-    const [steps,setSteps] = useState(0)
+    const [componentLength,setComponentLength] = useState(0)
     return(
-        <StateContext.Provider value={[steps,setSteps]} >
+        <StateContext.Provider value={[componentLength,setComponentLength]} >
                 {children}
         </StateContext.Provider>
     )

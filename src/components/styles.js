@@ -18,9 +18,11 @@ justify-content:space-evenly;
 gap: ${({gap})=>gap ? gap :''};
 position: relative;
 margin-right: auto;
-/* scroll-snap-type:none;
-scrollbar-gutter: none; */
 scrollbar-width: 0px;
+overflow-x: scroll;
+&::-webkit-scrollbar{
+    display:none;
+}
 `
 
 

@@ -10,8 +10,9 @@ export const ReactStepForm = ({
   width,
   height,
   indicatorActiveColor,
-  indicatorInActiveColor
+  indicatorInActiveColor,
 }) => {
+
   useEffect(() => {
     if (!noOfSteps) {
       console.error('Uncaught Error : Number of steps not assigned a value')
@@ -48,12 +49,13 @@ export const Prev = (steps, setSteps) => {
 }
 
 export const Next = (steps, setSteps, noOfSteps) => {
-  // console.log(steps)
+   const calculatedSteps =  noOfSteps - steps
+ 
   if (steps < noOfSteps) {
     setSteps((prevsate) => prevsate + 1)
   } else if (steps > noOfSteps) {
     console.error('Error:Cannot move forward due to the exhaustion of steps')
-    console.warn('Fix: Add new steps in order to mve forward')
+    console.warn('Fix: Add new steps in order to move forward')
     return steps
   } else {
     return steps
