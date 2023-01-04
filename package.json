@@ -1,6 +1,6 @@
 {
   "name": "@ebubechi_ihediwa/react-step-form",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react-step-form built using react for react projects",
   "license": "MIT",
   "repository": "Ebubechi123/react-step-form",
@@ -33,7 +33,9 @@
     "multi-step",
     "form",
     "react-component",
-    "react-step-form"
+    "react-step-form",
+    "@ebubechi_ihediwa/react-step-form",
+    "@ebubechi_ihediwa"
   ],
   "author": {
     "name": "Ebubechi Ihediwa",
