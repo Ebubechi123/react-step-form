@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { ReactStepForm, Prev, Next } from 'react-step-form'
+import { ReactStepForm, Prev, Next } from '@ebubechi_ihediwa/react-step-form'
 const Test1 = ({ steps, setSteps, noOfSteps }) => {
   return (
     <>

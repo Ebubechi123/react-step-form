@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save react-step-form
+npm install --save @ebubechi_ihediwa/react-step-form
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install --save react-step-form
 ```jsx
 import React, { useState } from 'react'
 
-import { ReactStepForm, Prev, Next } from 'react-step-form'
+import { ReactStepForm, Prev, Next } from '@ebubechi_ihediwa/react-step-form'
 const Test1 = ({ steps, setSteps, noOfSteps }) => {
   return (
     <>
