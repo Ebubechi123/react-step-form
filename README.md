@@ -2,7 +2,7 @@
 
 > react-step-form built using react for react projects
 
-[![NPM](https://img.shields.io/npm/v/react-step-form.svg)](https://www.npmjs.com/package/react-step-form) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@ebubechi_ihediwa/react-step-form.svg)](https://www.npmjs.com/package/@ebubechi_ihediwa/react-step-form) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
