@@ -1,4 +1,4 @@
-# @ebubechi_ihediwa/react-step-form
+# react-step-form
 
 > Multi-Step-Form built using react for react projects
 
